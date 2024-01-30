@@ -5,7 +5,7 @@ pipeline {
         stage('Hello') {
             steps {
                 echo 'Hello World Eitan'
-                scrips {
+                script {
                     /*def rootDir = pwd()*/
                     def greet = load "g_script.groovy"
                     greet.greet()

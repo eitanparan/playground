@@ -6,9 +6,10 @@ pipeline {
             steps {
                 echo 'Hello World Eitan'
                 script {
-                    /*def rootDir = pwd()*/
-                    def greet = load "g_script.groovy"
-                    greet.greet()
+                    def rootDir = pwd()
+                    echo "${rootDir}"
+                    /*def greet = load "g_script.groovy"
+                    greet.greet()*/
                 }
             }
         }

@@ -1,6 +1,3 @@
-def rootDir = pwd()
-def greet = load "${rootDir}@script/g_script.groovy"
-
 pipeline {
     agent any
     
@@ -9,6 +6,8 @@ pipeline {
             steps {
                 echo 'Hello World Eitan'
                 scrips {
+                    def rootDir = pwd()
+                    def greet = load "${rootDir}@script/g_script.groovy"
                     greet.greet()
                 }
             }

@@ -9,8 +9,7 @@ pipeline {
                     def rootDir = pwd()
                     
                     def greet = load "/var/jenkins_home/workspace/pipeline/Eitan.groovy"
-                    def a = new greet()
-                    a.greet()
+                    greet.greet()
                 }
             }
         }

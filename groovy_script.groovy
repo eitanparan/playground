@@ -6,9 +6,8 @@ pipeline {
             steps {
                 echo 'Hello World Eitan'
                 script {
-                    def rootDir = pwd()
                     
-                    def greet = load "/var/jenkins_home/workspace/pipeline/Eitan.groovy"
+                    def greet = load "/var/jenkins_home/workspace/pipeline/g_script.groovy"
                     greet.greet()
                 }
             }
